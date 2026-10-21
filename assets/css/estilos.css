@@ -2,8 +2,8 @@
     /* colores del sitio */
     --color-a: steelblue;
     --color-a--hover: tomato;
-    --color-h3: #fff;
-    --bg-h3: #00000050;
+    --color-h2: #fff;
+    --bg-h2: #00000050;
 
     --h-portada: 40vh;
     
@@ -65,14 +65,14 @@ header.portada {
     align-items: center;
     justify-content: center;
 
-    & h3 {
+    & h2 {
         position: relative;
         width: 100%;
         margin: 0;
         padding: 1em;
         text-align: center;
-        color: var(--color-h3);
-        background-color: var(--bg-h3);
+        color: var(--color-h2);
+        background-color: var(--bg-h2);
     }
 }
 
