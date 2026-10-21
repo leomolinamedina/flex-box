@@ -6,7 +6,7 @@
     --bg-h2: #00000050;
 
     --h-portada: 40vh;
-    
+
     /* imagenes del sitio */
     --bg-url-portada: url("https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_1280.jpg");
     --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
@@ -14,6 +14,9 @@
     --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
     --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+    --logo: url("../svg/logo.svg");
+    --ratio-logo: 184/66;
+    --marca-agua-h: 3rem;
 }
 
 body {
@@ -127,16 +130,33 @@ ul.galeria {
                 visibility: hidden;
                 font-size: 0;
                 background-color: #00000050;
-
             }
 
             &:hover figcaption {
-                transition: .3s;
+                transition: 0.3s;
                 opacity: 1;
                 visibility: visible;
                 font-size: 2rem;
             }
         }
+    }
+}
+
+.agua {
+    position: relative;
+
+    &::before {
+        position: fixed;
+        content: "";
+        width: calc(var(--marca-agua-h) * var(--ratio-logo));
+        height: var(--marca-agua-h);
+        right: 1.5rem;
+        bottom: 1.5rem;
+        background-image: var(--logo);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: .5;
     }
 }
 
