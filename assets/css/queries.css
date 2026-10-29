@@ -1,0 +1,31 @@
+/* TABLETA: hasta 900 px */
+@media screen and (max-width: 900px) {
+    .boton-responsive {
+        background-color: #ffc107;
+        color: #222;
+    }
+
+    .boton-responsive::before {
+        content: "Tableta: @media (max-width: 900px)";
+    }
+}
+
+/* MÓVIL: hasta 600 px */
+@media screen and (max-width: 600px) {
+    .boton-responsive {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .boton-responsive::before {
+        content: "Móvil: @media (max-width: 600px)";
+    }
+}
+
+@media (orientation: landscape) {
+    article.carrousel-container {
+        & ul.carrousel {
+            width: 60%;
+        }
+    }
+}

@@ -1,57 +1,3 @@
-:root {
-    /* colores del sitio */
-    --color-h2: #fff;
-    --bg-h2: #00000050;
-    --color-1: #1e3a8a;
-    --color-2: #3b82f6;
-    --color-3: #2098d1;
-    --color-texto: #666666;
-    --bg-body: #fefefe;
-
-    --h-portada: 40vh;
-
-    /* imagenes del sitio */
-    --bg-url-portada: url("https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_1280.jpg");
-    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
-    --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
-    --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
-    --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
-    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
-    --logo: url("../svg/logo.svg");
-    --ratio-logo: 184/66;
-    --marca-agua-h: 3rem;
-
-    --carrousel-1--thumb: url("https://pixfill.dev/300x200/3b82f6/ffffff");
-    --carrousel-1--medium: url("https://pixfill.dev/480x320/3b82f6/ffffff");
-    --carrousel-1--medium-large: url("https://pixfill.dev/768x512/3b82f6/ffffff");
-    --carrousel-1--large: url("https://pixfill.dev/1024x683/3b82f6/ffffff");
-    --carrousel-1--full: url("https://pixfill.dev/1920x1280/3b82f6/ffffff");
-
-    --carrousel-2--thumb: url("https://pixfill.dev/300x200/bdc011/ffffff");
-    --carrousel-2--medium: url("https://pixfill.dev/480x320/bdc011/ffffff");
-    --carrousel-2--medium-large: url("https://pixfill.dev/768x512/bdc011/ffffff");
-    --carrousel-2--large: url("https://pixfill.dev/1024x683/bdc011/ffffff");
-    --carrousel-2--full: url("https://pixfill.dev/1920x1280/bdc011/ffffff");
-
-    --carrousel-3--thumb: url("https://pixfill.dev/300x200/d265b5/ffffff");
-    --carrousel-3--medium: url("https://pixfill.dev/480x320/d265b5/ffffff");
-    --carrousel-3--medium-large: url("https://pixfill.dev/768x512/d265b5/ffffff");
-    --carrousel-3--large: url("https://pixfill.dev/1024x683/d265b5/ffffff");
-    --carrousel-3--full: url("https://pixfill.dev/1920x1280/d265b5/ffffff");
-
-    --carrousel-4--thumb: url("https://pixfill.dev/300x200/3711c0/ffffff");
-    --carrousel-4--medium: url("https://pixfill.dev/480x320/3711c0/ffffff");
-    --carrousel-4--medium-large: url("https://pixfill.dev/768x512/3711c0/ffffff");
-    --carrousel-4--large: url("https://pixfill.dev/1024x683/3711c0/ffffff");
-    --carrousel-4--full: url("https://pixfill.dev/1920x1280/3711c0/ffffff");
-
-    --carrousel-5--thumb: url("https://pixfill.dev/300x200/11c09d/ffffff");
-    --carrousel-5--medium: url("https://pixfill.dev/480x320/11c09d/ffffff");
-    --carrousel-5--medium-large: url("https://pixfill.dev/768x512/11c09d/ffffff");
-    --carrousel-5--large: url("https://pixfill.dev/1024x683/11c09d/ffffff");
-    --carrousel-5--full: url("https://pixfill.dev/1920x1280/11c09d/ffffff");
-}
-
 @keyframes leoSimpleCarrousel {
     0%,
     15% {
@@ -75,6 +21,17 @@
     }
     100% {
         transform: translate3d(0%, 0, 0);
+    }
+}
+
+@keyframes leoCarretera {
+    0%,
+    100% {
+        background-position: 1000px bottom;
+    }
+
+    100% {
+        background-position: 0 bottom;
     }
 }
 
@@ -200,56 +157,6 @@ header.portada {
     }
 }
 
-ul.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-
-    & li {
-        min-width: 20rem;
-        height: 15rem;
-        flex: 1;
-
-        & figure {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-            overflow: hidden;
-
-            &::before {
-                transition: transform 0.5s ease;
-            }
-
-            &:hover::before {
-                transform: scale(1.1);
-            }
-
-            & figcaption {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-                opacity: 0;
-                visibility: hidden;
-                font-size: 0;
-                background-color: #00000050;
-            }
-
-            &:hover figcaption {
-                transition: 0.3s;
-                opacity: 1;
-                visibility: visible;
-                font-size: 2rem;
-            }
-        }
-    }
-}
-
 .agua {
     position: relative;
 
@@ -268,22 +175,6 @@ ul.galeria {
     }
 }
 
-.diapositiva-1::before {
-    background-image: var(--bg-img-galeria-1);
-}
-.diapositiva-2::before {
-    background-image: var(--bg-img-galeria-2);
-}
-.diapositiva-3::before {
-    background-image: var(--bg-img-galeria-3);
-}
-.diapositiva-4::before {
-    background-image: var(--bg-img-galeria-4);
-}
-.diapositiva-5::before {
-    background-image: var(--bg-img-galeria-5);
-}
-
 /* Estilos generales: escritorio */
 .boton-responsive {
     padding: 20px 30px;
@@ -300,287 +191,52 @@ ul.galeria {
     content: "Escritorio: sin media query específica";
 }
 
-/* TABLETA: hasta 900 px */
-@media screen and (max-width: 900px) {
-    .boton-responsive {
-        background-color: #ffc107;
-        color: #222;
-    }
-
-    .boton-responsive::before {
-        content: "Tableta: @media (max-width: 900px)";
-    }
-}
-
-/* MÓVIL: hasta 600 px */
-@media screen and (max-width: 600px) {
-    .boton-responsive {
-        background-color: #dc3545;
-        color: white;
-    }
-
-    .boton-responsive::before {
-        content: "Móvil: @media (max-width: 600px)";
-    }
-}
-
-/* @media (hover: none) {
-    .boton-responsive {
-        background-color: gray;
-    }
-} */
-
 .transicion-color {
-    width: 25vw;
+    position: relative;
+    width: 100%;
     height: 25vw;
     background-color: steelblue;
+    background-image: url("images/carretera.png");
+    background-size: 100% 30%;
+    background-position: left bottom;
+    background-repeat: repeat-x;
     box-shadow: none;
-    transition:
-        width 2s ease,
-        box-shadow 2s ease;
 
-    &:hover {
-        width: 100%;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
-    }
-}
+    animation: leoCarretera 3s linear infinite;
 
-ul.demo {
-    background: #fff;
-    border: 1px solid #d9deea;
-    border-radius: 12px;
-    padding: 1.2rem;
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
+    span {
+        display: block;
+        width: 20vw;
+        height: 20vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: left 2s;
 
-    & .celda {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 2rem;
-        background: #eef2ff;
-        border-radius: 10px;
-        font-size: 0.8rem;
-        color: #55607a;
-
-        &:hover .t1a {
-            transform: translate(1.5rem, 1.5rem);
-        }
-
-        &:hover .t2a {
-            transform: rotate(45deg);
-        }
-
-        &:hover .t3a {
-            transform: scale(1.5);
-        }
-
-        & .caja {
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            background: #2f5bff;
-            display: grid;
-            place-items: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            transition: transform 0.5s ease;
-
-            & span {
-                color: #fff;
-            }
-        }
-    }
-}
-
-article.carrousel-container {
-    min-height: 100vh;
-
-    & ul.carrousel {
-        display: flex;
-        width: 100%;
-        /* height: 30vh; */
-        margin: 0 auto;
-        padding: 0;
-        overflow: hidden;
-
-        list-style-type: none;
-
-        border-radius: 0.8rem;
-        box-shadow: 1em 1em 1em #00000080;
-
-        &:hover li {
-            animation-play-state: paused;
-        }
-
-        & li {
+        &::after {
+            content: "";
+            display: block;
             width: 100%;
             height: 100%;
-            flex-shrink: 0;
-            animation: leoSimpleCarrousel 20s infinite ease-in-out;
-            will-change: transform;
-
-            & figure {
-                width: 100%;
-                height: 100%;
-                aspect-ratio: 3 / 2;
-
-                & figcaption {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    padding: 1rem;
-                    text-align: center;
-                    background: linear-gradient(to top, #00000080, transparent);
-                    color: #fff;
-
-                    text-shadow: 1px 1px 2px #000;
-                }
-            }
+            background-image: url("images/moto.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform-origin: 30% 50%;
+            rotate: 0deg;
+            transition: rotate 2s ease;
         }
     }
-}
 
-article.carrousel-container {
-    & ul.carrousel {
-        & li:nth-child(1) figure::before {
-            background-image: var(--carrousel-1--thumb);
-        }
-
-        & li:nth-child(2) figure::before {
-            background-image: var(--carrousel-2--thumb);
-        }
-
-        & li:nth-child(3) figure::before {
-            background-image: var(--carrousel-3--thumb);
-        }
-
-        & li:nth-child(4) figure::before {
-            background-image: var(--carrousel-4--thumb);
-        }
-
-        & li:nth-child(5) figure::before {
-            background-image: var(--carrousel-5--thumb);
-        }
+    &:hover {
+        animation: leoCarretera 1.5s linear infinite;
     }
-}
 
-@media (orientation: landscape) {
-    article.carrousel-container {
-        & ul.carrousel {
-            width: 60%;
-        }
-    }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-    article.carrousel-container {
-        & ul.carrousel {
-            & li:nth-child(1) figure::before {
-                background-image: var(--carrousel-1--medium);
-            }
-
-            & li:nth-child(2) figure::before {
-                background-image: var(--carrousel-2--medium);
-            }
-
-            & li:nth-child(3) figure::before {
-                background-image: var(--carrousel-3--medium);
-            }
-
-            & li:nth-child(4) figure::before {
-                background-image: var(--carrousel-4--medium);
-            }
-
-            & li:nth-child(5) figure::before {
-                background-image: var(--carrousel-5--medium);
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    article.carrousel-container {
-        & ul.carrousel {
-            width: 90%;
-
-            & li:nth-child(1) figure::before {
-                background-image: var(--carrousel-1--medium-large);
-            }
-
-            & li:nth-child(2) figure::before {
-                background-image: var(--carrousel-2--medium-large);
-            }
-
-            & li:nth-child(3) figure::before {
-                background-image: var(--carrousel-3--medium-large);
-            }
-
-            & li:nth-child(4) figure::before {
-                background-image: var(--carrousel-4--medium-large);
-            }
-
-            & li:nth-child(5) figure::before {
-                background-image: var(--carrousel-5--medium-large);
-            }
-        }
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1919px) {
-    article.carrousel-container {
-        & ul.carrousel {
-            width: 60%;
-            & li:nth-child(1) figure::before {
-                background-image: var(--carrousel-1--large);
-            }
-
-            & li:nth-child(2) figure::before {
-                background-image: var(--carrousel-2--large);
-            }
-
-            & li:nth-child(3) figure::before {
-                background-image: var(--carrousel-3--large);
-            }
-
-            & li:nth-child(4) figure::before {
-                background-image: var(--carrousel-4--large);
-            }
-
-            & li:nth-child(5) figure::before {
-                background-image: var(--carrousel-5--large);
-            }
-        }
-    }
-}
-
-@media (min-width: 1920px) {
-    article.carrousel-container {
-        & ul.carrousel {
-            & li:nth-child(1) figure::before {
-                background-image: var(--carrousel-1--full);
-            }
-
-            & li:nth-child(2) figure::before {
-                background-image: var(--carrousel-2--full);
-            }
-
-            & li:nth-child(3) figure::before {
-                background-image: var(--carrousel-3--full);
-            }
-
-            & li:nth-child(4) figure::before {
-                background-image: var(--carrousel-4--full);
-            }
-
-            & li:nth-child(5) figure::before {
-                background-image: var(--carrousel-5--full);
-            }
+    &:hover span {
+        left: calc(100% - 20vw);
+        
+        &::after {
+            rotate: -45deg;
         }
     }
 }
