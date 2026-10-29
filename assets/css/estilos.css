@@ -234,9 +234,58 @@ header.portada {
 
     &:hover span {
         left: calc(100% - 20vw);
-        
+
         &::after {
             rotate: -45deg;
+        }
+    }
+}
+
+.transicion-arco {
+    position: relative;
+    width: 100%;
+    height: 25vw;
+    background-color: rgb(142, 224, 142);
+    background-image: url(images/diana.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 20%;
+            height: 100%;
+            background-image: url(images/arco.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 20%;
+            height: 100%;
+            background-image: url(images/flecha.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            top: 0;
+            left: 0;
+            transition: left 1s;
+        }
+
+        &:hover::after {
+            left: calc(100% - 30%);
         }
     }
 }
