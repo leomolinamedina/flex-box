@@ -248,8 +248,8 @@ header.portada {
     background-color: rgb(142, 224, 142);
     background-image: url(images/diana.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom;
+    background-size: auto 320px;
+    background-position: right 50px;
 
     span {
         display: block;
