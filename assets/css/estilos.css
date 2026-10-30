@@ -175,22 +175,6 @@ header.portada {
     }
 }
 
-/* Estilos generales: escritorio */
-.boton-responsive {
-    padding: 20px 30px;
-    border: none;
-    border-radius: 8px;
-    background-color: #198754;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-/* Texto generado por CSS */
-.boton-responsive::before {
-    content: "Escritorio: sin media query específica";
-}
-
 .transicion-color {
     position: relative;
     width: 100%;
