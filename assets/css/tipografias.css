@@ -1,0 +1,19 @@
+body,
+p,
+li,
+span {
+    color: var(--color-texto);
+    font-family: "Manrope", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Simonetta", serif, "Times New Roman";
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+}
